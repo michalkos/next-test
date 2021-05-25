@@ -1,0 +1,65 @@
+env:
+  browser: true
+  node: true
+  commonjs: true
+  es6: true
+  jest: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:jsx-a11y/recommended
+parser: babel-eslint
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 2018
+  sourceType: module
+plugins:
+  - react
+  - jsx-a11y
+  - react-hooks
+rules:
+  react-hooks/rules-of-hooks:
+    - error
+  react-hooks/exhaustive-deps:
+    - warn
+  indent:
+    - error
+    - 4
+    - ignoredNodes:
+      - TemplateLiteral
+  semi:
+    - error
+    - never
+  no-console:
+    - error
+    - allow:
+        - error
+        - warn
+        - info
+  object-curly-spacing:
+    - error
+    - always
+  array-bracket-spacing:
+    - error
+    - never
+  jsx-quotes:
+    - error
+    - prefer-single
+  quotes:
+    - warn
+    - single
+  comma-dangle:
+    - warn
+    - always-multiline
+  lines-between-class-members:
+    - error
+    - always
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+  react/display-name:
+    - off
+settings:
+  react:
+    version: detect
